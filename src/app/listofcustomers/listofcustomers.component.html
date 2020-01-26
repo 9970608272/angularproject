@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>Customer List</h3>
+        </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                   <th>Phone</th>
+                  
+                  <th>Address</th>
+                    <th></th>
+                   
+                     </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let cust of customers">
+                    <td>{{cust.id}}</td>
+                    <td>{{cust.name}}</td>
+                    <td>{{cust.email}}</td>
+                    <td>{{cust.phone}}</td>
+                   
+                    <td>{{cust.address.streetAddress}}
+                        {{cust.address.city}}
+                        {{cust.address.pin}}
+                        {{cust.address.state}}
+                     </td>
+                   
+                         <td><a routerLink="/deletecustomer/{{cust.id}}">Remove</a></td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+

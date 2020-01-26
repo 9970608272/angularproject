@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User List </title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>List Of Photographer</h3>
+        </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name </th>
+                    <th>Email</th>
+                  <th>Phone </th>
+                     <th>Address</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let ph of Photographers">
+                    <td>{{ph.id}}</td>
+                    <td>{{ph.name}}</td>
+                    <td>{{ph.email}}</td>
+                    <td>{{ph.phone}}</td>
+                    <td>  
+                        
+                        {{ph.address.streetAddress}}
+                            {{ph.address.city}}
+                            {{ph.address.pin}}
+                            {{ph.address.state}}
+                    
+                    </td>
+
+                    <td><a routerLink="/deletephotographer/{{ph.id}}">Remove</a></td>
+                    <td><a routerLink="/editphotographer/{{ph.id}}">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
+

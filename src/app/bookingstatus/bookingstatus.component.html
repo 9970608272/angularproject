@@ -1,0 +1,28 @@
+
+<table style="height: 100%;width: 100%;background-color:antiquewhite;">
+<h1 style="text-align: center;">Booking Status</h1>
+  
+  
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phoneno</th>
+        
+        <th scope="col">Status</th>
+      
+    </tr>
+    <tr *ngFor="let ph of photo">
+      <td>{{ph.Id}}</td>
+      <td>{{ph.Name}}</td>
+      <td>{{ph.Phoneno}}</td>
+      <td>
+          <input type="button" value="Granted">
+      </td>
+     
+   
+  </table>
+  
+</div>
+</table>

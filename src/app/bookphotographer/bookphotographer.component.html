@@ -1,0 +1,37 @@
+
+
+<h1>Book Photographer</h1>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="">UserName</label>
+      <input [(ngModel)]="name" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">PhghprName</label>
+      <input [(ngModel)]="email" type="email" class="form-control">
+    </div>
+    <div class="form-group">
+           Function: <select>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Prewedding">Prewedding</option>
+                    <option value="other">other</option>
+                  </select>
+    </div>
+    <div>
+          DateTime:<input type="datetime-local" name="bdaytime">
+    </div>
+    <div>
+        venue:<input type="text">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <button (click)="onSignup()" class="btn btn-success">Book</button>
+        <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Reset</button>
+    </div>
+    
+  </div>
+</div>

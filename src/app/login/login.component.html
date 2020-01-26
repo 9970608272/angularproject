@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+<!-- 
+<table style="height: 100%;width: 100%;background-color:antiquewhite;">
+<div>
+  <h1 style="text-align: center;">Login</h1>
+  
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+      <div class="row">
+      <div class="form-group">
+        <label for="">Email</label>
+        <input [(ngModel)]="email" type="email" class="form-control">
+      </div>
+    </div>
+       <div class="row">
+      <div class="form-group">
+        <label for="">Password</label>
+        <input [(ngModel)]="password" type="password" class="form-control">
+      </div>
+    </div>
+      <div class="form-group">
+          <button (click)="onLogin()" class="btn btn-success">Login</button>
+          <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+          <button (click)="onSignup()"  class="btn btn-warning pull-right">Signup</button>
+         
+      </div>
+    </div>
+  </div>
+  </div>
+</table> -->
+
+
+
+<div class="col-md-2"></div>
+<div  class="col-md-5">
+        <tbody  >
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <div class="container" >
+                <form #myForm = "ngForm" (ngSubmit)="SignIn(myForm)" style="width: 50%;">
+                    <legend style="font-size: 40px;font-weight: bold; text-align: center; color:aliceblue">Log In</legend>
+                    <!-- <span *ngIf="service.loginsuc" style="font-size: 16px"  class="label label-danger">Invalid User Name/ Password</span> -->
+
+                    <div class="form-group" style="background-image: url()">
+                        <label style="font-size: 20px;color: aliceblue" for="email">Email</label>
+                        <input ngModel style="border: none; border-bottom: 2px solid rebeccapurple" type="text" class="form-control" name="email" id="email" placeholder="Enter Email" >
+                    </div>
+                <br>
+                    <div class="form-group">
+                        <label style="font-size: 20px;color: aliceblue" for="password">Password</label>
+                        <input ngModel style="border: none; border-bottom: 2px solid rebeccapurple" type="password" class="form-control" name="password" id="password" placeholder="Enter Password" >
+                    </div>
+                    <button style="font-size: 20px" type="submit" class="btn btn-success" >Log In</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button style="font-size: 20px" type="button" class="btn btn-danger" onclick="" >Cancel</button>
+                    <button type="button" class="btn btn-primary" (click)="Signup()" style="float: right;font-size: 20px" >Signup</button>
+                    <br>
+                   
+                    
+                    
+                </form>
+            </div>
+        </div>
+        </tbody>
+</div>
+<div class="col-md-5"></div>
