@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminServiceService } from '../dataservices/admin-service.service';
 
 @Component({
   selector: 'app-personalinfo',
@@ -7,14 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./personalinfo.component.css']
 })
 export class PersonalinfoComponent implements OnInit {
+  Photographers:any;
+  constructor(private as: AdminServiceService) {
 
-  constructor(private router:Router) { }
-
-  ngOnInit() 
-  {
-    
-  }
-  onCancel(){
-    this.router.navigate(["/photographer"])
    }
+
+  ngOnInit() {
+
+    let obsRes=this.as.SelectPhotographer();
+
+    obsRes.subscribe(        (result)=>   {
+        console.log(result);
+
+      this.Photographers= result;
+
+    })
+
+  }
+
 }

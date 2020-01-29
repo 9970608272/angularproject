@@ -10,11 +10,9 @@ import { FunctionType } from '../model/FType';
   styleUrls: ['./viewplan.component.css']
 })
 export class ViewplanComponent implements OnInit {
-  plans: any;
+  pls: any;
 
-  pls:Plan[]= [{"id":1, "fType":FunctionType.WEDDING, "charges":100, photographer:undefined},
-  {"id":2, "fType":FunctionType.BIRTHDAY, "charges":500, photographer:undefined},
-  {"id":3, "fType":FunctionType.OTHER, "charges":600, photographer:undefined}]
+ 
 
   constructor(private router: Router, private as: AdminServiceService) { }
 
@@ -22,7 +20,7 @@ export class ViewplanComponent implements OnInit {
     let obsRes = this.as.SelectViewplan();
     obsRes.subscribe((result) => {
       console.log(result);
-      this.plans = result;
+      this.pls = result;
     })
   }
 

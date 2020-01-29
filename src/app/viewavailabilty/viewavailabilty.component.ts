@@ -32,9 +32,14 @@ export class ViewavailabiltyComponent implements OnInit {
   onView() {
     this.router.navigate(["/viewplan"])
   }
-  onGallary() {
-    this.router.navigate(["/gallary"])
+  onGallary(id) {
+    this.router.navigate(["/showgallery/"+id])
   }
+
+  onTime() {
+    this.router.navigate(["/time"])
+  }
+
   Book(ph) {
     let cust = JSON.parse(sessionStorage.getItem("user"));
    this.booking=JSON.parse(sessionStorage.getItem("booking"));

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h2>Image</h2>
+    <h2>Image</h2>
 
-<h4>wedding</h4>
-<img src="/assets/project.jpg" alt="Album image" width="300" height="300">
-<input type="file" id="myFile" name="filename"><input type="button" value="remove"> 
 
-<input type="submit">
-<h4>Other</h4>
-<img src="/assets/lib.jpg" alt="Album image" width="300" height="300">
 
-<input type="file" id="myFile" name="filename"><input type="button" value="remove">
-<input type="submit">
+    <h4>Other</h4>
+    <!-- <img src="/assets/lib.jpg" alt="Album image" width="300" height="300"> -->
+
+    <input type="file" (change)=onselect($event)>
+    
+    <input type="button" value="submit" (click)="onSubmit()">
+
 </body>
+
 </html>

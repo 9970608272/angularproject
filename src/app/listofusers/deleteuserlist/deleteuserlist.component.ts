@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PhotographerserviceService } from 'src/app/dataservices/photographerservice.service';
 
 @Component({
   selector: 'app-deleteuserlist',
@@ -6,10 +8,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deleteuserlist.component.css']
 })
 export class DeleteuserlistComponent implements OnInit {
+No: string;
+  constructor(private route: ActivatedRoute,
+    private ds: PhotographerserviceService,
+    private router: Router) { }
 
-  constructor() { }
+    ngOnInit() {
 
-  ngOnInit() {
+      this.route.paramMap.subscribe((result) => {
+  
+        this.No = result.get("userId");
+        console.log(this.No);
+  
+        let observableresult = this.ds.DeleteUserbyId(this.No);
+  
+        observableresult.subscribe((result) => {
+  
+          console.log(result);
+  
+          setTimeout(() => {
+            this.router.navigate(['/listofusers']);
+          },
+            2000);
+  
+        })
+      })
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    }
+  
   }
 
-}
+

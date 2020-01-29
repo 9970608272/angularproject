@@ -23,7 +23,7 @@ import { ViewplanComponent } from './viewplan/viewplan.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { UserComponent } from './user/user.component';
 import { ViewavailabiltyComponent } from './viewavailabilty/viewavailabilty.component';
-import { BookingstatusComponent } from './bookingstatus/bookingstatus.component';
+
 import { BookphotographerComponent } from './bookphotographer/bookphotographer.component';
 import { HelpComponent } from './help/help.component';
 import { ListofcustomersComponent } from './listofcustomers/listofcustomers.component';
@@ -36,6 +36,10 @@ import { AddAddressComponent } from './address/add-address/add-address.component
 import { BookingComponent } from './listofusers/booking/booking.component';
 
 import { SelectuseraddressComponent } from './user/selectuseraddress/selectuseraddress.component';
+import { DeletepersonalinfoComponent } from './personalinfo/deletepersonalinfo/deletepersonalinfo.component';
+import { EditpersonalinfoComponent } from './personalinfo/editpersonalinfo/editpersonalinfo.component';
+import { TimeComponent } from './viewavailabilty/time/time.component';
+import { ShowGalleryComponent } from './show-gallery/show-gallery.component';
 
 
 
@@ -60,7 +64,7 @@ import { SelectuseraddressComponent } from './user/selectuseraddress/selectusera
   GallaryComponent,
   UserComponent,
   ViewavailabiltyComponent,
-  BookingstatusComponent,
+  
   BookphotographerComponent,
   HelpComponent,
   ListofcustomersComponent,
@@ -73,6 +77,15 @@ import { SelectuseraddressComponent } from './user/selectuseraddress/selectusera
   BookingComponent,
 
   SelectuseraddressComponent,
+
+  DeletepersonalinfoComponent,
+
+  EditpersonalinfoComponent,
+
+  TimeComponent,
+
+  ShowGalleryComponent,
+
 
   
  
@@ -98,7 +111,7 @@ import { SelectuseraddressComponent } from './user/selectuseraddress/selectusera
      { path:"listofusers", component:ListofusersComponent },
      { path:"bookphotographer", component:BookphotographerComponent },
      
-     { path:"bookingstatus", component:BookingstatusComponent },
+     
      { path:"bookingrequest", component:BookingrequestComponent },
      { path:"viewavailabilty", component:ViewavailabiltyComponent },
      { path:"personalinfo", component:PersonalinfoComponent },
@@ -107,17 +120,17 @@ import { SelectuseraddressComponent } from './user/selectuseraddress/selectusera
      { path:"editphotographer/:photographerId", component:EditphotographerComponent },
      { path:"deletecustomer/:customerId", component:DeletecustomerComponent },
      { path:"deleteviewplan/:planId", component:DeleteviewplanComponent },
-     { path:"addaddress", component:AddAddressComponent }
-
-     
+     { path:"addaddress", component:AddAddressComponent },
+     { path:"deletepersonalinfo/:photographerId", component:DeletepersonalinfoComponent },
+     { path:"editpersonalinfo/:photographerId", component:EditpersonalinfoComponent },
+     { path:"deleteuserlist/:userId", component:DeleteuserlistComponent },
+     { path:"time", component:TimeComponent },
+     { path:"addaddress", component:AddAddressComponent },
   
-     
-    
-     
+     { path:"showgallery/:id", component:ShowGalleryComponent }
+  
 
-
-
-  ])
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

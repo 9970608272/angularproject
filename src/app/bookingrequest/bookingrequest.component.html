@@ -51,10 +51,10 @@
               <thead>
                   <tr>
                       <th>BookingId</th>
-                      <!-- <th>Plan </th> -->
+                      <th>Plan </th> 
                       <th>Time </th>
-                      <!-- <th>Customer </th>
-                      <th>Photographer </th> -->
+                       <th>Customer </th>
+                      <th>Photographer </th>
 
                   
                   </tr>
@@ -62,13 +62,13 @@
               <tbody>
   
                   <tr *ngFor="let ph of Photographers">
-                      <td>{{ph.bookingId}}</td>
-                      <!-- <td>{{ph.plan}}</td> -->
+                      <td>{{ph.id}}</td>
+                      <td>{{ph.plan}}</td> 
                       <td>{{ph.time}}</td>
-                      <!-- <td>{{ph.customer}}</td>
-                      <td>{{ph.photographer}}</td> -->
-               <td><a routerLink="/deletephotographer/{{ph.bookingId}}">Accept</a></td>
-               <td><a routerLink="/editphotographer/{{ph.bookingId}}">Reject</a></td>
+                       <td>{{ph.customer}}</td>
+                      <td>{{ph.photographer}}</td>
+               <td><a routerLink="/deletephotographer/{{ph.id}}">Accept</a></td>
+               <td><a routerLink="/editphotographer/{{ph.id}}">Reject</a></td>
                   </tr>
               </tbody>
           </table>

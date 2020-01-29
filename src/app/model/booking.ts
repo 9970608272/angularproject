@@ -2,12 +2,14 @@
 import { Customer } from './customer';
 import { Photographer } from './photographer';
 import { Plan } from './plan';
+import { Time } from '@angular/common';
 
 export class Booking{
     
     id:number;
     plan:Plan;
-    time:string;
+    date:Date;
+    time:any;
     customer:Customer;
     photographer:Photographer;
    
@@ -16,7 +18,8 @@ export class Booking{
         {
             this.id = 0;
             this.plan = new Plan();
-            this.time = "";
+            this.date = new Date();
+            this.time = new Date;
             this.customer =new Customer();
             this.photographer = new Photographer();
           

@@ -83,11 +83,15 @@
                             <button (click)="onView()" style="margin-left: 10px;">ViewPlan</button>
                         </td>
                         <td>
-                            <button (click)="onGallary()" class="btn btn-warning pull-right">Gallary</button>
+                            <button (click)="onGallary(ph.id)" class="btn btn-warning pull-right">Gallary</button>
                         </td>
                         <td>
                             <button type="button" (click)="Book(ph)">Book</button>
                         </td>
+                        <td>
+                            <button (click)="onTime()" style="margin-left: 10px;background-color:green">Time</button>
+                        </td>
+                        
                     </tr>
                 </tbody>
             </table>
